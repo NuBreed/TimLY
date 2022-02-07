@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,400;0,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Roboto', sans-serif;
+    /* background-color: rgba(241, 225, 241); */
+    background-color: rgb(245, 235, 245);
+}
+
+:root {
+    --primary-color-1: #800080;
+    --primary-color-2: #e600e6;
+    --primary-color-4: #ff99ff;
+    --primary-color-5: #ffe6ff;
+    --white: #ffffff;
+    --black: #000000;
+    --font-header: 'Kaushan Script', cursive;
+    --br: 10px;
+    --transition: 1s linear;
+}
+
+hr {
+    color: var(--primary-color-4);
+}
+
+
+/* global */
+
+h1 {
+    font-size: 3.5rem;
+    font-family: var(--font-header);
+    color: var(--primary-color-1);
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--br);
+}
+
+.section {
+    max-width: 100vw;
+}
+
+.section-center {
+    width: 90vw;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.section-title {
+    font-family: var(--font-header);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--br);
+    font-size: 1.25rem;
+    color: var(--white);
+    background-color: var(--primary-color-1);
+}
+
+
+/* navbar */
+
+.nav {
+    box-shadow: 0 0 2px black;
+}
+
+.nav-center {
+    margin: auto;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.links-wrapper {
+    flex-basis: 100%;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+.links li a {
+    color: var(--primary-color-1);
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+.links li a:hover {
+    font-weight: 200;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.nav-form span {
+    margin: 0 1rem;
+}
+
+.fa-cart-plus {
+    font-size: 1.25rem;
+    color: var(--primary-color-1);
+    cursor: pointer;
+}
+
+.nav-span-2 {
+    border-radius: 50rem;
+    border: 1.5px solid var(--primary-color-1);
+    padding: 0.5rem;
+}
+
+.nav-span-2 input {
+    border: none;
+    outline: none;
+    padding: 0.25rem 1rem;
+    border-radius: var(--br);
+}
+
+.fa-search {
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: var(--primary-color-1);
+}
+
+.fa-search:focus {
+    color: #ffe6ff;
+}
+
+.cart {
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    background-color: var(--white);
+    width: 25%;
+    text-align: center;
+    height: fit-content;
+    visibility: hidden;
+    transition: 5ms ease;
+}
+
+.cart-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cart-details span {
+    color: var(--primary-color-4);
+    font: 1.5rem var(--font-header);
+}
+
+.cart-details i {
+    color: red;
+}
+
+.cart-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.show {
+    visibility: visible;
+}
+
+
+/* hero */
+
+.hero {
+    text-align: center;
+}
+
+
+/* products */
+
+.product-header {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.product-img {
+    height: 200px;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input[type='range'] {
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+.product-cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.product-card {
+    border-radius: var(--br);
+    flex: 1;
+    flex-basis: 30%;
+    margin: 12px auto 0;
+    text-align: center;
+    box-shadow: 1px 1px 5px var(--primary-color-4);
+    transition: 0.5s linear;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+}
+
+.product-card p {
+    display: none;
+}
+
+.product-card h4 {
+    color: var(--primary-color-2);
+    font-size: 1.1rem;
+}
+
+.footer-center {
+    text-align: center;
+    font-size: 1.25rem;
+}

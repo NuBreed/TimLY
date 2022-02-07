@@ -1,0 +1,38 @@
+const heroInput = document.querySelector('.hero-input')
+const products = document.querySelector('.product-cards')
+const heroSearch = document.querySelector('.fa-search')
+    // products.innerHTML = newData()
+heroSearch.addEventListener('click', function() {
+    const value = heroInput.value
+})
+
+const data = () => {
+    const fetchedData = fetch('https://fakestoreapi.com/products')
+        .then((response) => response.json())
+        .then((data) =>
+            data
+            .map((product) => {
+                const {
+                    title,
+                    image,
+                    id,
+                    price,
+                    description,
+                    category,
+                    rating: { rate, count },
+                } = product
+                return `<div class="product-card" data-id="${id}">
+                    <img src="${image}" alt="product-img" class="img product-img">
+                    <h4 class="product-name">${title}</h4>
+                    <h6>$${price}</h6>
+                    <div>${rate}</div>
+                    <p>${count} pieces left</p>  
+                  
+                </div>`
+            })
+            .join('')
+        )
+
+    products.innerHTML = data
+}
+data()
